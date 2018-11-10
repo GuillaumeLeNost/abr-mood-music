@@ -30,9 +30,9 @@ sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
 # Model
 # anger, contempt, disgust, fear, happiness, neutral, sadness, surprise
-current_emotions = np.array([0.1, 0.5, 0.3, 0.2, 0.8, 0.1, 0.2, 0.01])
-target_emotions = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-target_mask = np.array([1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0])
+current_emotions = {"anger": 0.0, "contempt": 0.0, "disgust": 0.0, "fear": 0.0, "happiness": 0.0, "neutral": 0.0, "sadness": 0.0, "surprise": 0.0}
+target_emotions = {"anger": 0.0, "contempt": 0.0, "disgust": 0.0, "fear": 0.0, "happiness": 0.0, "neutral": 0.0, "sadness": 0.0, "surprise": 0.0}
+target_mask = {"happiness"}
 target_mood = "party"
 
 lookup = {}
@@ -45,67 +45,51 @@ def mood2targetemotions(mood):
     # Return weighted
     target_mood = mood
 
-    targets = lookup[target_mood]["target"]
+    target_mask = lookup[target_mood]["target"]
+    print(target_mask)
 
-    # Emotions: anger, contempt, disgust, fear, happiness, neutral, sadness, surprise
-    for t in targets:
+    # re-init target_emotions
+    for emo in target_emotions:
+        target_emotions[emo] = 0.0
 
-        if t == "anger":
-            target_emotions[0] = 1.0;
-        elif t == "contempt":
-            target_emotions[1] = 1.0;
-        elif t == "disgust":
-            target_emotions[2] = 1.0;
-        elif t == "fear":
-            target_emotions[3] = 1.0;
-        elif t == "happiness":
-            target_emotions[4] = 1.0;
-        elif t == "neutral":
-            target_emotions[5] = 1.0;
-        elif t == "sadness":
-            target_emotions[6] = 1.0;
-        elif t == "surprise":
-            target_emotions[7] = 1.0;
-        else:
-            raise("unknown mood {0}".format(t))
+    for prop in target_mask:
+        target_emotions[prop] = 1.0
+
+    print(target_emotions)
+    print(target_mask)
+
 
 def emotions2spotify(emo):
     print("TODO")
-
 
 def fetch_faces():
     img_url = 'https://raw.githubusercontent.com/Microsoft/Cognitive-Face-Windows/master/Data/detection1.jpg'
     # img_url = 'C:\img\son.jpg'
     result = CF.face.detect(img_url, attributes='emotion')
-
     return result
 
 def faces2emotions(faces):
 
-    emotions = [0, 0, 0, 0, 0, 0, 0, 0]
+    emotions = {}
 
+    # TODO: only take into account last fast (!)
     for face in faces:
-        emotions_dict = face["faceAttributes"]["emotion"]
-        emotions[0] = emotions_dict["anger"]
-        emotions[1] = emotions_dict["contempt"]
-        emotions[2] = emotions_dict["disgust"]
-        emotions[3] = emotions_dict["fear"]
-        emotions[4] = emotions_dict["happiness"]
-        emotions[5] = emotions_dict["neutral"]
-        emotions[6] = emotions_dict["sadness"]
-        emotions[7] = emotions_dict["surprise"]
+        emotions = face["faceAttributes"]["emotion"]
 
-    print(emotions)
     return emotions
 
 
-def emodistance(a,b,mask):
+def emodistance(c, t, mask):
 
-    mask_sum = np.sum(mask)
-    a = a * mask
-    b = b * mask
-    delta = abs(a - b)
-    sum = np.sum(delta) / mask_sum
+    mask_sum = len(mask)
+
+    sum = 0
+
+    for prop in mask:
+        sum = sum + abs(t[prop] - c[prop])
+
+    sum = sum / mask_sum
+
     return sum
 
 
@@ -125,26 +109,27 @@ def getAudioFeatures(track_ids):
 def moodtarget(args,mood):
     print("Set mood target to: {0}".format(mood))
     mood2targetemotions(mood)
-    # print(target_emotions)
-
 
 
 def getemotions(args):
-    client.send_message("/emotions/anger", current_emotions[0])
-    client.send_message("/emotions/contempt", current_emotions[1])
-    client.send_message("/emotions/disgust", current_emotions[2])
-    client.send_message("/emotions/fear", current_emotions[3])
-    client.send_message("/emotions/happiness", current_emotions[4])
-    client.send_message("/emotions/neutral", current_emotions[5])
-    client.send_message("/emotions/sadness", current_emotions[6])
-    client.send_message("/emotions/surprise", current_emotions[7])
+    client.send_message("/emotions/anger", current_emotions["anger"])
+    client.send_message("/emotions/contempt", current_emotions["contempt"])
+    client.send_message("/emotions/disgust", current_emotions["disgust"])
+    client.send_message("/emotions/fear", current_emotions["fear"])
+    client.send_message("/emotions/happiness", current_emotions["happiness"])
+    client.send_message("/emotions/neutral", current_emotions["neutral"])
+    client.send_message("/emotions/sadness", current_emotions["sadness"])
+    client.send_message("/emotions/surprise", current_emotions["surprise"])
 
 def process_faces(args):
     faces = fetch_faces()
     current_emotions = faces2emotions(faces)
+
     print(current_emotions)
+
+
     # update distance
-    d = emodistance(current_emotions,target_emotions,target_mask)
+    d = emodistance(current_emotions, target_emotions, target_mask)
 
     if d > 0.1:
         emotions2spotify(target_emotions)

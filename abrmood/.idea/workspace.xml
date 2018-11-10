@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6270c1c6-7dae-4dc3-8318-0991e14cc560" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/abr_master.maxpat" beforeDir="false" afterPath="$PROJECT_DIR$/abr_master.maxpat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face.json" beforeDir="false" afterPath="$PROJECT_DIR$/face.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lookup.json" beforeDir="false" afterPath="$PROJECT_DIR$/lookup.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,22 +56,22 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="5" />
-          <entry key="py" value="1573" />
+          <entry key="py" value="2015" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1578" />
+          <entry key="Python" value="2020" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="1" />
+          <entry key="py" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="1" />
+          <entry key="Python" value="4" />
         </counts>
       </usages-collector>
     </session>
@@ -78,14 +81,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="105">
+              <caret line="47" column="10" lean-forward="true" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
               <folding>
                 <element signature="e#37#52#0" expanded="true" />
-                <marker date="1541889630912" expanded="true" signature="2310:2315" ph="..." />
-                <marker date="1541889630912" expanded="true" signature="2310:3140" ph="..." />
-                <marker date="1541889630912" expanded="true" signature="2328:2331" ph="..." />
-                <marker date="1541889630912" expanded="true" signature="2640:3140" ph="..." />
+                <marker date="1541892847235" expanded="true" signature="1964:1969" ph="..." />
+                <marker date="1541892847235" expanded="true" signature="1964:2419" ph="..." />
+                <marker date="1541892847235" expanded="true" signature="1982:1984" ph="..." />
+                <marker date="1541892847235" expanded="true" signature="2319:2419" ph="..." />
               </folding>
             </state>
           </provider>
@@ -109,11 +112,16 @@
       <find>getRecommendations</find>
       <find>face</find>
       <find>faces2emotions</find>
-      <find>print</find>
       <find>emo_dict</find>
       <find>Emotions</find>
       <find>fetch_faces</find>
+      <find>anger</find>
       <find>current_emotions</find>
+      <find>target_emotions</find>
+      <find>party</find>
+      <find>print</find>
+      <find>target_mask</find>
+      <find>emodistance</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -215,13 +223,13 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4973404" visible="true" weight="0.24983476" />
+      <window_info id="Structure" order="1" sideWeight="0.50265956" side_tool="true" visible="true" weight="0.24983476" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.24504249" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17588653" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.36737588" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.46666667" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.10638298" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -239,6 +247,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
@@ -270,21 +285,35 @@
     </entry>
     <entry file="file://C:/Python37/Lib/socketserver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="462" selection-start-line="462" selection-end-line="462" />
+        <state relative-caret-position="548">
+          <caret line="359" column="29" lean-forward="true" selection-start-line="359" selection-start-column="29" selection-end-line="359" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/abrmood/venv/Lib/site-packages/pythonosc/osc_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/abrmood/venv/Lib/site-packages/pythonosc/dispatcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="105">
+          <caret line="47" column="10" lean-forward="true" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
           <folding>
             <element signature="e#37#52#0" expanded="true" />
-            <marker date="1541889630912" expanded="true" signature="2310:2315" ph="..." />
-            <marker date="1541889630912" expanded="true" signature="2310:3140" ph="..." />
-            <marker date="1541889630912" expanded="true" signature="2328:2331" ph="..." />
-            <marker date="1541889630912" expanded="true" signature="2640:3140" ph="..." />
+            <marker date="1541892847235" expanded="true" signature="1964:1969" ph="..." />
+            <marker date="1541892847235" expanded="true" signature="1964:2419" ph="..." />
+            <marker date="1541892847235" expanded="true" signature="1982:1984" ph="..." />
+            <marker date="1541892847235" expanded="true" signature="2319:2419" ph="..." />
           </folding>
         </state>
       </provider>

@@ -8,8 +8,8 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 718.0, 267.0, 599.0, 334.0 ],
-		"bgcolor" : [ 0.501961, 0.717647, 0.764706, 1.0 ],
+		"rect" : [ 395.0, 275.0, 599.0, 334.0 ],
+		"bgcolor" : [ 0.360784, 0.360784, 0.360784, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -31,6 +31,20 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-2",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 30.0, 270.0, 130.0, 18.0 ],
+					"text" : "/moodtarget emotional"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
 					"fontsize" : 36.0,
 					"frgb" : 0.0,
 					"id" : "obj-23",
@@ -38,7 +52,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 13.0, 11.0, 420.0, 48.0 ],
-					"text" : "ABR MASTER"
+					"text" : "ABR DARK MIRROR",
+					"textcolor" : [ 0.694118, 0.694118, 0.694118, 1.0 ]
 				}
 
 			}
@@ -66,7 +81,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 284.0, 143.0, 71.0, 20.0 ],
-					"text" : "metro 1000"
+					"text" : "metro 3000"
 				}
 
 			}
@@ -294,6 +309,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}

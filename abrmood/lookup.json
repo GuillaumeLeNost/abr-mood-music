@@ -1,44 +1,27 @@
 {
-  "party": 
-    {
-      "target": ["happiness", "surprise"],
-      "seed_genre": ["party", "happy", "dance"],
-      "target_mode": 1,
-      "min_danceability": 0.8,
-      "min_energy": 0.7,
-      "max_energy": 0.3,
-      "max_valence": {},
-      "min_valence": 0.8,
-      "max_tempo": {},
-      "min_tempo": 130
-    }
-  ,
-  "emotional": 
-    {
-      "target": ["sadness"],
-      "seed_genre": ["sad", "emo", "soul"],
-      "target_mode": 0,
-      "min_danceability": {},
-      "min_energy": {},
-      "max_energy": 0.3,
-      "max_valence": 0.2,
-      "min_valence": {},
-      "max_tempo": 80,
-      "min_tempo": {}
-    }
-  ,
-  "dark": 
-    {
-      "target": ["anger", "fear", "contempt"],
-      "seed_genre": ["black-metal", "death-metal", "goth", "hardcore"],
-      "target_mode": 0,
-      "min_danceability": {},
-      "min_energy": 0.8,
-      "max_energy": {},
-      "max_valence": 0.2,
-      "min_valence": {},
-      "min_tempo": 140,
-      "max_tempo": {}
-    }
-  
+  "party":
+  {
+  	"target": ["happiness", "surprise"],
+    "seed_genres": ["party", "happy", "dance"],
+    "target_mode": 1,
+    "min_danceability": 0.7,
+    "min_energy": 0.6,
+    "min_valence": 0.7
+  },
+  "emotional":
+  {
+  	"target": ["sadness"],
+    "seed_genres": ["sad", "emo", "soul"],
+    "target_mode": 0,
+    "max_energy": 0.3,
+    "max_valence": 0.3
+  },
+  "dark":
+  {
+  	"target": ["anger", "fear", "contempt"],
+    "seed_genres": ["black-metal", "death-metal", "hardcore"],
+    "target_mode": 0,
+    "min_energy": 0.7,
+    "max_valence": 0.3
+  }
 }
