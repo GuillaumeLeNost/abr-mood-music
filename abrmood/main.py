@@ -127,12 +127,7 @@ def moodtarget(args,mood):
     mood2targetemotions(mood)
     # print(target_emotions)
 
-    d = emodistance(current_emotions,target_emotions,target_mask)
 
-    if d > 0.1:
-        emotions2spotify(target_emotions)
-
-    print("distance = {0}".format(d))
 
 def getemotions(args):
     client.send_message("/emotions/anger", current_emotions[0])
@@ -148,6 +143,13 @@ def process_faces(args):
     faces = fetch_faces()
     current_emotions = faces2emotions(faces)
     print(current_emotions)
+    # update distance
+    d = emodistance(current_emotions,target_emotions,target_mask)
+
+    if d > 0.1:
+        emotions2spotify(target_emotions)
+
+    print("distance = {0}".format(d))
 
 
 # MAIN==================================================================================================================

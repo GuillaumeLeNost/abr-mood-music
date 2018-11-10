@@ -53,12 +53,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="5" />
-          <entry key="py" value="1545" />
+          <entry key="py" value="1573" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1550" />
+          <entry key="Python" value="1578" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -78,14 +78,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+            <state relative-caret-position="235">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="e#37#52#0" expanded="true" />
-                <marker date="1541889238525" expanded="true" signature="2310:2315" ph="..." />
-                <marker date="1541889238525" expanded="true" signature="2310:3140" ph="..." />
-                <marker date="1541889238525" expanded="true" signature="2328:2331" ph="..." />
-                <marker date="1541889238525" expanded="true" signature="2640:3140" ph="..." />
+                <marker date="1541889630912" expanded="true" signature="2310:2315" ph="..." />
+                <marker date="1541889630912" expanded="true" signature="2310:3140" ph="..." />
+                <marker date="1541889630912" expanded="true" signature="2328:2331" ph="..." />
+                <marker date="1541889630912" expanded="true" signature="2640:3140" ph="..." />
               </folding>
             </state>
           </provider>
@@ -277,14 +277,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+        <state relative-caret-position="235">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
           <folding>
             <element signature="e#37#52#0" expanded="true" />
-            <marker date="1541889238525" expanded="true" signature="2310:2315" ph="..." />
-            <marker date="1541889238525" expanded="true" signature="2310:3140" ph="..." />
-            <marker date="1541889238525" expanded="true" signature="2328:2331" ph="..." />
-            <marker date="1541889238525" expanded="true" signature="2640:3140" ph="..." />
+            <marker date="1541889630912" expanded="true" signature="2310:2315" ph="..." />
+            <marker date="1541889630912" expanded="true" signature="2310:3140" ph="..." />
+            <marker date="1541889630912" expanded="true" signature="2328:2331" ph="..." />
+            <marker date="1541889630912" expanded="true" signature="2640:3140" ph="..." />
           </folding>
         </state>
       </provider>
