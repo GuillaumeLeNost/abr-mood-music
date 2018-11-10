@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6270c1c6-7dae-4dc3-8318-0991e14cc560" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,12 +52,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="279" />
+          <entry key="Python Console" value="5" />
+          <entry key="py" value="1545" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="279" />
+          <entry key="Python" value="1550" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -78,12 +78,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+            <state relative-caret-position="196">
+              <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
               <folding>
                 <element signature="e#37#52#0" expanded="true" />
-                <marker date="1541882395856" expanded="true" signature="1544:1549" ph="..." />
-                <marker date="1541882395856" expanded="true" signature="1544:1571" ph="..." />
+                <marker date="1541889238525" expanded="true" signature="2310:2315" ph="..." />
+                <marker date="1541889238525" expanded="true" signature="2310:3140" ph="..." />
+                <marker date="1541889238525" expanded="true" signature="2328:2331" ph="..." />
+                <marker date="1541889238525" expanded="true" signature="2640:3140" ph="..." />
               </folding>
             </state>
           </provider>
@@ -105,7 +107,13 @@
       <find>mood2emotions</find>
       <find>moodtarget</find>
       <find>getRecommendations</find>
+      <find>face</find>
+      <find>faces2emotions</find>
       <find>print</find>
+      <find>emo_dict</find>
+      <find>Emotions</find>
+      <find>fetch_faces</find>
+      <find>current_emotions</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -119,8 +127,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="20" />
-    <option name="y" value="-20" />
+    <option name="x" value="27" />
+    <option name="y" value="340" />
     <option name="width" value="1935" />
     <option name="height" value="1060" />
   </component>
@@ -151,8 +159,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Python" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../cognitive-services-python-sdk-samples" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -167,7 +176,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" singleton="true">
       <module name="abrmood" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -211,13 +220,13 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.24504249" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18130311" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17588653" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.36737588" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.19688386" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.11473088" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -242,6 +251,15 @@
       </default-breakpoints>
     </breakpoint-manager>
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>faces</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/pythonosc/dispatcher.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -259,12 +277,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+        <state relative-caret-position="196">
+          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
           <folding>
             <element signature="e#37#52#0" expanded="true" />
-            <marker date="1541882395856" expanded="true" signature="1544:1549" ph="..." />
-            <marker date="1541882395856" expanded="true" signature="1544:1571" ph="..." />
+            <marker date="1541889238525" expanded="true" signature="2310:2315" ph="..." />
+            <marker date="1541889238525" expanded="true" signature="2310:3140" ph="..." />
+            <marker date="1541889238525" expanded="true" signature="2328:2331" ph="..." />
+            <marker date="1541889238525" expanded="true" signature="2640:3140" ph="..." />
           </folding>
         </state>
       </provider>
