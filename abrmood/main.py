@@ -21,27 +21,36 @@ sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
 
 # Model
-current_emotions = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+current_emotions = np.array([0.1, 0.5, 0.3, 0.2, 0.8, 0.1, 0.2, 0.01])
 target_emotions = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+target_mask = np.array([1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0])
 
 # Functions ------------------------------------------------------------------------------------------------------------
 
-def mood2emotions(mood):
+def mood2targetemotions(mood):
     # Return weighted
     # Emotions: anger, contempt, disgust, fear, happiness, neutral, sadness, surprise
     if (mood == "party"):
-        return np.array([0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0])
+        target_emotions = np.array([0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0])
+        target_mask = np.array([0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0])
     elif (mood == "energized"):
-        return np.array([0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0])
+        target_emotions = np.array([0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0])
+        target_mask = np.array([0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0])
+    else:
+        raise("unkown mood")
 
 def emotions2spotify(emo):
     print("emo 2 spo")
 
 
 
-def emodistance(a,b):
-    m = np.abs(np.add(a,np.negative(b)))
-    sum = np.sum(m)
+def emodistance(a,b,mask):
+
+    mask_sum = np.sum(mask)
+    a = a * mask
+    b = b * mask
+    delta = abs(a - b)
+    sum = np.sum(delta) / mask_sum
     return sum
 
 def getRecommendations(seed_genre, happiness):
@@ -58,10 +67,14 @@ def getAudioFeatures(track_ids):
 # OSC handlers ---------------------------------------------------------------------------------------------------------
 def moodtarget(args,mood):
     print("Set mood target to: {0}".format(mood))
-    target_emotions = mood2emotions(mood)
+    mood2targetemotions(mood)
     print(target_emotions)
 
-    d = emodistance(target_emotions,current_emotions)
+    d = emodistance(current_emotions,target_emotions,target_mask)
+
+    if (d > 0.5):
+        emotions2spotify(target_emotions)
+
     print("distance = {0}".format(d))
 
 def getemotions(args):
