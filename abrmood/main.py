@@ -71,11 +71,7 @@ def mood2spotify(mood):
     print(audio_features)
 
     next_audio = audio_features[random.randint(0, len(audio_features))]['uri']
-    playSong(next_audio, user_token)
-
-
-
-
+    play_song(next_audio, user_token)
 
 
 def fetch_faces():
@@ -87,13 +83,19 @@ def fetch_faces():
 
 def faces2emotions(faces):
 
-    emotions = {}
+    new_emotions = {"anger": 0.0, "contempt": 0.0, "disgust": 0.0, "fear": 0.0, "happiness": 0.0, "neutral": 0.0, "sadness": 0.0, "surprise": 0.0}
 
-    # TODO: only take into account last fast (!)
-    for face in faces:
-        emotions = face["faceAttributes"]["emotion"]
+    nb_faces = len(faces)
 
-    return emotions
+    if nb_faces > 0:
+        print("{0} face(s)".format(nb_faces))
+        # TODO: only take into account last fast (!)
+        for face in faces:
+            for key, val in face["faceAttributes"]["emotion"].items():
+                new_emotions[key] = new_emotions[key]  + val / nb_faces
+
+
+    return new_emotions
 
 
 def emodistance(c, t, mask):
@@ -116,12 +118,12 @@ def emodistance(c, t, mask):
     return sum
 
 # Emotions to Spotify --------------------------------------------------------------------------------------------------
-def openJson(json_file):
+def open_json(json_file):
     with open(json_file) as f:
         data = json.load(f)
     return(data)
 
-def getRecommendations(**kwargs):
+def get_recommendations(**kwargs):
 
     recom_tracks = sp.recommendations(limit=100, **kwargs)['tracks']
     result=[]
@@ -129,11 +131,11 @@ def getRecommendations(**kwargs):
         result.append(track['id'])
     return result
 
-def getAudioFeatures(track_ids):
+def get_audio_features(track_ids):
     audio_features=sp.audio_features(tracks=track_ids)
     return audio_features
 
-def playSong(uri, token):
+def play_song(uri, token):
     url='https://api.spotify.com/v1/me/player/play'
     headers = {
     'Accept': 'application/json',
@@ -144,9 +146,9 @@ def playSong(uri, token):
 
 def getRecommendationsFromMood(mood):
     mood = "party"
-    data = openJson("lookup.json")
-    recommendations=getRecommendations(**data[mood])
-    audio_features = getAudioFeatures(recommendations)
+    data = open_json("lookup.json")
+    recommendations=get_recommendations(**data[mood])
+    audio_features = get_audio_features(recommendations)
     return(audio_features)
 
 # OSC handlers ---------------------------------------------------------------------------------------------------------
@@ -183,6 +185,10 @@ def process_faces(args):
     client.send_message("/emotions/surprise", current_emotions["surprise"])
 
 
+
+
+def process_next(args):
+    print("NEXT")
     # Update distance
     d = emodistance(current_emotions, target_emotions, target_mask)
 
@@ -190,8 +196,6 @@ def process_faces(args):
         mood2spotify(target_emotions)
 
     print("distance = {0}".format(d))
-
-
 
 # MAIN==================================================================================================================
 if __name__ == "__main__":
@@ -217,6 +221,7 @@ if __name__ == "__main__":
     dispatcher.map("/moodtarget", moodtarget)
     dispatcher.map("/getemotions", getemotions)
     dispatcher.map("/faces", process_faces)
+    dispatcher.map("/next", process_next)
 
 
     server = osc_server.BlockingOSCUDPServer(
