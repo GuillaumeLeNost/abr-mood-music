@@ -113,6 +113,7 @@ def moodtarget(args,mood):
 
 
 def getemotions(args):
+    print("GET emotions")
     client.send_message("/emotions/anger", current_emotions["anger"])
     client.send_message("/emotions/contempt", current_emotions["contempt"])
     client.send_message("/emotions/disgust", current_emotions["disgust"])
@@ -121,6 +122,16 @@ def getemotions(args):
     client.send_message("/emotions/neutral", current_emotions["neutral"])
     client.send_message("/emotions/sadness", current_emotions["sadness"])
     client.send_message("/emotions/surprise", current_emotions["surprise"])
+
+    client2.send_message("/emotions/anger", current_emotions["anger"])
+    client2.send_message("/emotions/contempt", current_emotions["contempt"])
+    client2.send_message("/emotions/disgust", current_emotions["disgust"])
+    client2.send_message("/emotions/fear", current_emotions["fear"])
+    client2.send_message("/emotions/happiness", current_emotions["happiness"])
+    client2.send_message("/emotions/neutral", current_emotions["neutral"])
+    client2.send_message("/emotions/sadness", current_emotions["sadness"])
+    client2.send_message("/emotions/surprise", current_emotions["surprise"])
+
 
 def process_faces(args):
     faces = fetch_faces()
@@ -153,6 +164,8 @@ if __name__ == "__main__":
 
     # Set up OSC client
     client = udp_client.SimpleUDPClient("127.0.0.1", 9001)
+    client2 = udp_client.SimpleUDPClient("10.11.2.47", 1337)
+
 
     # Set up OSC server
     # /moodtarget happy, energized, chill, party, sad
