@@ -63,7 +63,8 @@ def emotions2spotify(emo):
     print("TODO")
 
 def fetch_faces():
-    img_url = 'https://raw.githubusercontent.com/Microsoft/Cognitive-Face-Windows/master/Data/detection1.jpg'
+    # img_url = 'https://raw.githubusercontent.com/Microsoft/Cognitive-Face-Windows/master/Data/detection1.jpg'
+    img_url = 'C:\\dev\\Repositories\\abr-mood-music\\abrmood\\img\\frame.jpg'
     # img_url = 'C:\img\son.jpg'
     result = CF.face.detect(img_url, attributes='emotion')
     return result
