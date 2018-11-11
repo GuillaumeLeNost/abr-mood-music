@@ -50,7 +50,7 @@ def mood2targetemotions(mood):
 
     # re-init target_emotions
     for emo in target_emotions:
-        target_emotions[emo] = 0.0
+        emo = 0.0
 
     for prop in target_mask:
         target_emotions[prop] = 1.0

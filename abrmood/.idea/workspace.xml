@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6270c1c6-7dae-4dc3-8318-0991e14cc560" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/abr_master.maxpat" beforeDir="false" afterPath="$PROJECT_DIR$/abr_master.maxpat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/face.json" beforeDir="false" afterPath="$PROJECT_DIR$/face.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lookup.json" beforeDir="false" afterPath="$PROJECT_DIR$/lookup.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,12 +54,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="5" />
-          <entry key="py" value="2015" />
+          <entry key="py" value="2020" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2020" />
+          <entry key="Python" value="2025" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -81,14 +79,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="47" column="10" lean-forward="true" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+            <state relative-caret-position="122">
+              <caret line="66" column="71" selection-start-line="66" selection-start-column="71" selection-end-line="66" selection-end-column="71" />
               <folding>
                 <element signature="e#37#52#0" expanded="true" />
-                <marker date="1541892847235" expanded="true" signature="1964:1969" ph="..." />
-                <marker date="1541892847235" expanded="true" signature="1964:2419" ph="..." />
-                <marker date="1541892847235" expanded="true" signature="1982:1984" ph="..." />
-                <marker date="1541892847235" expanded="true" signature="2319:2419" ph="..." />
+                <marker date="1541895046640" expanded="true" signature="1964:1969" ph="..." />
+                <marker date="1541895046640" expanded="true" signature="1964:2461" ph="..." />
+                <marker date="1541895046640" expanded="true" signature="1982:1984" ph="..." />
+                <marker date="1541895046640" expanded="true" signature="2361:2461" ph="..." />
               </folding>
             </state>
           </provider>
@@ -223,12 +221,12 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4973404" visible="true" weight="0.24983476" />
-      <window_info id="Structure" order="1" sideWeight="0.50265956" side_tool="true" visible="true" weight="0.24983476" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989899" visible="true" weight="0.24983476" />
+      <window_info id="Structure" order="1" sideWeight="0.5010101" side_tool="true" visible="true" weight="0.24983476" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.24504249" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.46666667" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29787233" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.10638298" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -306,14 +304,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="47" column="10" lean-forward="true" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+        <state relative-caret-position="122">
+          <caret line="66" column="71" selection-start-line="66" selection-start-column="71" selection-end-line="66" selection-end-column="71" />
           <folding>
             <element signature="e#37#52#0" expanded="true" />
-            <marker date="1541892847235" expanded="true" signature="1964:1969" ph="..." />
-            <marker date="1541892847235" expanded="true" signature="1964:2419" ph="..." />
-            <marker date="1541892847235" expanded="true" signature="1982:1984" ph="..." />
-            <marker date="1541892847235" expanded="true" signature="2319:2419" ph="..." />
+            <marker date="1541895046640" expanded="true" signature="1964:1969" ph="..." />
+            <marker date="1541895046640" expanded="true" signature="1964:2461" ph="..." />
+            <marker date="1541895046640" expanded="true" signature="1982:1984" ph="..." />
+            <marker date="1541895046640" expanded="true" signature="2361:2461" ph="..." />
           </folding>
         </state>
       </provider>
