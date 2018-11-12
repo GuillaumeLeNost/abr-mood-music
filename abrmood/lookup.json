@@ -1,0 +1,64 @@
+{
+  "party":
+  {
+  	"target": ["happiness", "surprise"],
+    "seed_genres": ["party", "happy", "dance"],
+    "target_mode": 1,
+    "min_danceability": 0.7,
+    "min_energy": 0.6,
+    "min_valence": 0.7
+  },
+  "emotional":
+  {
+  	"target": ["sadness"],
+    "seed_genres": ["sad", "acoustic", "soul"],
+    "target_mode": 0,
+    "max_energy": 0.2,
+    "max_valence": 0.2
+  },
+  "dark":
+  {
+  	"target": ["anger", "fear", "contempt"],
+    "seed_genres": ["black-metal", "death-metal", "hardcore"],
+    "target_mode": 0,
+    "max_valence": 0.3
+  },
+  "energized":
+  {
+  	"target": ["happiness", "surprise"],
+    "seed_genres": ["groove", "dance", "pop"],
+    "target_mode": 1,
+    "min_tempo": 100,
+    "target_energy": 0.9
+  },
+  "chill":
+  {
+  	"target": ["neutral"],
+    "seed_genres": ["chill"],
+    "target_tempo": 70,
+    "max_energy": 0.3
+  },
+  "focused":
+  {
+  	"target": ["neutral"],
+    "seed_genres": ["electronic", "ambient", "study"],
+    "max_energy": 0.4,
+    "target_valence": 0.5,
+    "target_instrumentalness": 0.8
+  },
+  "happy":
+  {
+  	"target": ["happiness"],
+    "seed_genres": ["happy"],
+    "target_mode": 1,
+    "min_energy": 0.6,
+    "target_valence": 0.8
+  },
+  "sad":
+  {
+  	"target": ["sadness"],
+    "seed_genres": ["sad"],
+    "target_mode": 0,
+    "max_valence": 0.2
+  }
+}
