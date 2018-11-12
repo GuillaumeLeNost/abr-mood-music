@@ -4,7 +4,7 @@ at Abbey Road Hackathon 2018
 # Audio Mirror
 Sensing a crowd's mood and steering it through audio
 
-Created by: Victoria, Leon, Guillaume and Fred. Mentored by Rosanna and [missing name]
+Created by: Victoria, Leon, Guillaume and Fred. Mentored by Rosanna and Ruwen
 
 
 ## How to use music to change a crowd's mood?
